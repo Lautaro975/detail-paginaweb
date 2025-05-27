@@ -10,14 +10,14 @@ const Header = () => {
         </div>
 
         <div className="w-20 h-full relative">
-            <ImageLink href="/" alt="logo" src="/img/menu/logoWF.png" className="object-contain"/>
+            <ImageLink href="/" alt="logo" src="/img/menu/logoWF.png" classNameimg="object-contain" classNameLink="w-full h-full"/>
         </div>
         <div className="w-16 h-full flex items-center gap-5 mr-4">
             <div className="w-8 h-8 relative">
-                <ImageLink href="/cart" alt="cart" src="/img/menu/cart.png" className="object-contain"/>
+                <ImageLink href="/cart" alt="cart" src="/img/menu/cart.png" classNameimg="object-contain" classNameLink="w-full h-full"/>
             </div>
             <div className="w-8 h-8 relative">
-                <ImageLink href="/login" alt="user" src="/img/menu/nueva-cuenta.png" className="object-contain"/>
+                <ImageLink href="/login" alt="user" src="/img/menu/nueva-cuenta.png" classNameimg="object-contain" classNameLink="w-full h-full"/>
             </div>
         </div>
     </header>

@@ -5,27 +5,76 @@ import { EmblaOptionsType } from "embla-carousel";
 export default function Home() {
   const OPTIONS: EmblaOptionsType = {
     loop: true,
-    align: 'center',
-    containScroll: 'trimSnaps'
-  }
-  const SLIDES = [{
-    image: "/img/home/lavadoAuto.jpg",
-    text: <>Protección y <br /> limpieza para <br /> tu vehículo</>
-  },{
-    image: "/img/home/lavado-grl.avif",
-    text: <>Los productos y <br /> servicios que <br /> necesitas</>
-  }]
-  
+    align: "center",
+    containScroll: "trimSnaps",
+  };
+  const SLIDES = [
+    {
+      image: "/img/home/lavadoAuto.jpg",
+      text: (
+        <>
+          Protección y <br /> limpieza para <br /> tu vehículo
+        </>
+      ),
+    },
+    {
+      image: "/img/home/lavado-grl.avif",
+      text: (
+        <>
+          Los productos y <br /> servicios que <br /> necesitas
+        </>
+      ),
+    },
+  ];
+
   return (
     <main className="w-full min-h-screen bg-gray-100 ">
       <div className="max-w-7xl mx-auto">
         <EmblaCarousel sliders={SLIDES} options={OPTIONS} />
       </div>
-      <div className="relative">
-        <ImageLink href="/" src="/img/home/usoFabrica.png" alt="usoFabrica" className="object-cover">
-          <p className="text-black text-2xl font-bold">sadsa</p>
-        </ImageLink>
-      </div>
+      <section className="flex flex-col items-center justify-center">
+        <div className="relative w-full h-64 mt-8 max-w-lg">
+          <ImageLink
+            href="/"
+            src="/img/home/usoPersonal.png"
+            alt="uso personal"
+            classNameimg="object-cover peer brightness-[90%] hover:brightness-75 transition-all duration-300"
+            classNameLink="absolute right-1/2 top-1/2 w-fit px-4 translate-x-1/2 text-center -translate-y-1/2 border-8 border-white py-2 [&:hover]:border-blue-600 [&:hover]:bg-blue-600 peer-hover:border-blue-600 peer-hover:bg-blue-600 shadow-2xl shadow-black transition-all duration-300"
+          >
+            <span className="text-white text-xl font-bold whitespace-nowrap">
+              USO PERSONAL
+            </span>
+          </ImageLink>
+        </div>
+        <div className="relative w-full h-64 mt-8 max-w-lg">
+          <ImageLink
+            href="/"
+            src="/img/home/usoProfesional.png"
+            alt="uso profesional"
+            classNameimg="object-cover peer brightness-[90%] hover:brightness-75 transition-all"
+            classNameLink="absolute right-1/2 top-1/2 w-fit px-4 translate-x-1/2 text-center -translate-y-1/2 border-8 border-white py-2 [&:hover]:border-red-500 [&:hover]:bg-red-500 peer-hover:border-red-500 peer-hover:bg-red-500 shadow-2xl shadow-black transition-all duration-300"
+          >
+            <span className="text-white text-xl font-bold whitespace-nowrap">
+              USO PROFESIONALES
+            </span>
+          </ImageLink>
+        </div>
+        <div className="relative w-full h-64 mt-8 max-w-lg">
+          <ImageLink
+            href="/"
+            src="/img/home/usoFabrica.png"
+            alt="uso industrial"
+            classNameimg="object-cover peer brightness-[90%] hover:brightness-75 transition-all"
+            classNameLink="absolute right-1/2 top-1/2 w-fit px-4 translate-x-1/2 text-center -translate-y-1/2 border-8 border-white py-2 [&:hover]:border-orange-600 [&:hover]:bg-orange-600 peer-hover:border-orange-600 peer-hover:bg-orange-600 shadow-2xl shadow-black transition-all duration-300"
+          >
+            <span className="text-white text-xl font-bold whitespace-nowrap">
+              USO INDUSTRIAL
+            </span>
+          </ImageLink>
+        </div>
+        {/* esto no va a quedar asi, cuando tenga un back va a ver un objeto con
+        los datos de los productos ahora estan harcodiados */}
+      </section>
     </main>
   );
 }

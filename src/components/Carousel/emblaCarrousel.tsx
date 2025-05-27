@@ -70,7 +70,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                   className="object-cover animate-zoom"
                   fill
                 />
-                  <p dir='rtl' className={cn('absolute bottom-10 right-10 text-white text-prettier text-2xl font-bold drop-shadow-lg transition-all duration-300  delay-500 ', {
+                  <p dir='rtl' className={cn('absolute bottom-10 right-10 text-white text-prettier text-xl sm:text-2xl font-bold drop-shadow-lg transition-all duration-300  delay-500 ', {
                     'opacity-0 translate-x-5': currentIndex !== index
                   })}>
                     {slide.text}
@@ -87,11 +87,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
             key={index}
             onClick={() => onDotButtonClick(index)}
             className={`
-              w-8 h-8 flex items-center justify-center rounded-full cursor-pointer
+              w-4 h-4 sm:w-8 sm:h-8 flex items-center justify-center rounded-full cursor-pointer
               appearance-none bg-transparent touch-manipulation mx-1
-              [&:after]:content-[''] [&:after]:w-6 [&:after]:h-6 
+              [&:after]:content-[''] [&:after]:w-4 [&:after]:h-4 sm:[&:after]:w-6 sm:[&:after]:h-6 
               [&:after]:rounded-full [&:after]:flex [&:after]:items-center
-              [&:after]:border-4 [&:after]:border-white
+              [&:after]:border-[2px] sm:[&:after]:border-4 [&:after]:border-white
               ${index === selectedIndex ? 
                 '[&:after]:border-white [&:after]:bg-white' : 
                 '[&:after]:border-white [&:after]:bg-transparent'}
