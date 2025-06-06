@@ -28,12 +28,12 @@ export default function Home() {
   ];
 
   return (
-    <main className="w-full min-h-screen bg-gray-100 ">
-      <div className="max-w-7xl mx-auto">
+    <main className="w-full">
+      <div className="xl:h-[calc(100dvh-64px)] mb-20">
         <EmblaCarousel sliders={SLIDES} options={OPTIONS} />
       </div>
       <section className="flex flex-col items-center justify-center">
-        <div className="relative w-full h-64 mt-8 max-w-lg">
+        <div className="relative w-full md:h-96 h-52 max-w-2xl">
           <ImageLink
             href="/"
             src="/img/home/usoPersonal.png"
@@ -46,7 +46,7 @@ export default function Home() {
             </span>
           </ImageLink>
         </div>
-        <div className="relative w-full h-64 mt-8 max-w-lg">
+        <div className="relative w-full mt-8 md:h-96 h-52  max-w-2xl">
           <ImageLink
             href="/"
             src="/img/home/usoProfesional.png"
@@ -59,7 +59,7 @@ export default function Home() {
             </span>
           </ImageLink>
         </div>
-        <div className="relative w-full h-64 mt-8 max-w-lg">
+        <div className="relative w-full mt-8 md:h-96 h-52 max-w-2xl">
           <ImageLink
             href="/"
             src="/img/home/usoFabrica.png"

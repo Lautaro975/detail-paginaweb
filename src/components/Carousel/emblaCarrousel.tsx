@@ -53,24 +53,23 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onNavButtonClick
   )
   
-
   return (
-    <section className="max-w-3xl m-auto relative">
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex touch-pan-y touch-pinch-zoom -ml-4">
+    <section className="m-auto relative h-full">
+      <div className="overflow-hidden h-full" ref={emblaRef}>
+        <div className="flex touch-pan-y touch-pinch-zoom -ml-4 h-full">
           {sliders.map((slide,index) => (
             <div 
-              className="pl-4 transform translate-x-0 translate-y-0 translate-z-0 flex-[0_0_100%]" 
+              className="pl-4 transform translate-x-0 translate-y-0 translate-z-0 flex-[0_0_100%] h-full" 
               key={index}
             >
-              <div className="relative w-full aspect-[16/9] overflow-hidden">
-                <Image 
-                  src={slide.image} 
+              <div className="relative w-full aspect-[16/9] overflow-hidden h-full">
+                <Image
+                  src={slide.image}
                   alt="texto descripcion"
-                  className="object-cover animate-zoom"
+                  className="object-cover animate-zoom h-full w-full"
                   fill
                 />
-                  <p dir='rtl' className={cn('absolute bottom-10 right-10 text-white text-prettier text-xl sm:text-2xl font-bold drop-shadow-lg transition-all duration-300  delay-500 ', {
+                  <p dir='rtl' className={cn('absolute bottom-10 right-10 text-white text-prettier text-xl sm:text-2xl md:text-4xl  xl:text-5xl  2xl:text-6xl font-bold drop-shadow-lg transition-all duration-300  delay-500 ', {
                     'opacity-0 translate-x-5': currentIndex !== index
                   })}>
                     {slide.text}
